@@ -9,13 +9,6 @@ type User {
     savedTools: [ToolList]
 }
 
-type Query{
-    me: User
-    users: [User]
-    user(username: String!): User
-    tool(_id: ID!): Tool
-}
-
 type Tool {
     _id: ID
     toolId: String!
@@ -35,6 +28,14 @@ type Note{
 type Auth{
     token: ID!
     user: User
+}
+
+type Query{
+    me: User
+    users: [User]
+    user(username: String!): User
+    tool(_id: ID!): Tool
+    
 }
 
 input savedTool {
