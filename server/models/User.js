@@ -22,6 +22,10 @@ const userSchema = new Schema(
       required: true,
       minlength: 4
     },
+    checkedInBy: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     //set savedTools to be an array of data that adheres to the toolListSchema
     savedTools: [toolListSchema],
   },
